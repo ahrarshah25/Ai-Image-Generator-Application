@@ -1,6 +1,55 @@
+document.getElementById('menuToggle').addEventListener('click', () => {
+    document.getElementById('sidebar').classList.toggle('active');
+});
+
+var imageContainer = document.getElementById("imageContainer")
+var chatList = document.getElementById("chatList");
+var chats = JSON.parse(localStorage.getItem("chats")) || [];
+var currentChat = null;
+
+
+function renderChats() {
+    chatList.innerHTML = "";
+    for (var i = 0; i < chats.length; i++) {
+        var chat = chats[i];
+        var newDiv = document.createElement("div");
+        newDiv.className = "chat-item" + (currentChat === i ? " active" : "");
+        newDiv.textContent = chat.title;
+
+        newDiv.onclick = function (index) {
+            return function () {
+                loadChat(index);
+            }
+        }(i);
+        chatList.appendChild(newDiv);
+    }
+};
+
+function loadChat(index) {
+    currentChat = index;
+    var chat = chats[index];
+
+    document.getElementById("userInput").value = chat.title;
+    imageContainer.innerHTML = `
+    <img src="${chat.image}" alt="${chat.title}">
+    <a id="downloadBtn" href="${chat.image}" download="ai-image.jpg">Download</a>`
+
+    renderChats()
+}
+
+
+function newChat() {
+    currentChat = null;
+    document.getElementById("userInput").value = "";
+    imageContainer.innerHTML = "";
+    renderChats();
+}
+
 async function generateImage() {
     var userInput = document.getElementById("userInput").value.trim();
-    if (!userInput) return alert("Please enter something.");
+    if (!userInput) {
+        return alert("Please enter something.");
+    }
 
     imageContainer.innerHTML = `<p>Generating image...</p>`;
 
@@ -11,17 +60,34 @@ async function generateImage() {
 
         var data = await response.json();
         console.log(data);
-        
+
         if (data.results.length > 0) {
             var image = data.results[0].urls.small;
             imageContainer.innerHTML = `
                     <img src="${image}" alt="${userInput}">
                     <a id="downloadBtn" href="${image}" download="ai-image.jpg">Download</a>
                 `;
+
+            var newChat = { title: userInput, image: image };
+            chats.push(newChat);
+            localStorage.setItem("chats", JSON.stringify(chats));
+
+            currentChat = chats.length - 1;
+            renderChats();
         } else {
             imageContainer.innerHTML = `<p>No image found.</p>`;
         }
     } catch (error) {
         imageContainer.innerHTML = `<p>Error: ${error.message}</p>`;
     }
+}
+
+renderChats()
+
+
+function deleteChat(){
+    var chats = JSON.parse(localStorage.getItem("chats")) || [];
+    alert("All Chats Deleted!");
+    chats = localStorage.setItem("chats" , JSON.stringify([]));
+    window.location.reload();
 }
