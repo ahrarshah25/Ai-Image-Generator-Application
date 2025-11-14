@@ -91,3 +91,9 @@ function deleteChat() {
     chats = localStorage.setItem("chats", JSON.stringify([]));
     window.location.reload();
 }
+
+function userLogout(){
+    localStorage.removeItem("userFound" , "true");
+    alert("Logged Out Successfull");
+    window.location.href = "index.html"
+}
