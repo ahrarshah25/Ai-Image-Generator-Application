@@ -32,7 +32,7 @@ function loadChat(index) {
     document.getElementById("userInput").value = chat.title;
     imageContainer.innerHTML = `
     <img src="${chat.image}" alt="${chat.title}">
-    <a id="downloadBtn" href="${chat.image}" download="ai-image.jpg">Download</a>`
+    <a id="downloadBtn"  href="${chat.image}" download="ai-image.jpg">Download</a>`
 
     renderChats()
 }
@@ -65,7 +65,7 @@ async function generateImage() {
             var image = data.results[0].urls.small;
             imageContainer.innerHTML = `
                     <img src="${image}" alt="${userInput}">
-                    <a id="downloadBtn" href="${image}" download="ai-image.jpg">Download</a>
+                    <a id="downloadBtn" class="download-btn" href="${image}" download="ai-image.jpg">Download</a>
                 `;
 
             var newChat = { title: userInput, image: image };
@@ -85,9 +85,9 @@ async function generateImage() {
 renderChats()
 
 
-function deleteChat(){
+function deleteChat() {
     var chats = JSON.parse(localStorage.getItem("chats")) || [];
     alert("All Chats Deleted!");
-    chats = localStorage.setItem("chats" , JSON.stringify([]));
+    chats = localStorage.setItem("chats", JSON.stringify([]));
     window.location.reload();
 }
