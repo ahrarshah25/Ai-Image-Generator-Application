@@ -17,11 +17,21 @@ function userSignup(event) {
     }else if(confirmPassword !== userPassword){
         alert("Please Enter Correct Password In Confirm Password Section!");
     }else{
+        var monthsName = ["January" , "February" , "March" , "April" , "May" , "June" , "July" , "August" , "September" , "October" , "November" , "December"];
+        var date = new Date();
+        var currentMonth = date.getMonth();
+        var month = monthsName[currentMonth];
+        var day = date.getDate()
+        var fullYear = date.getFullYear()
+        var fullDate = month + " " + day + ", " + fullYear;
         localStorage.setItem("firstName" , firstName);
         localStorage.setItem("lastName" , lastName);
         localStorage.setItem("userEmail" , userEmail);
         localStorage.setItem("userPassword" , userPassword);
         localStorage.setItem("confirmPassword" , confirmPassword);
-        window.location.href = "login.html"
+        localStorage.setItem("memberSince" , fullDate);
+        window.location.href = "login.html";
+
+        
     }
 }

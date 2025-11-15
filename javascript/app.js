@@ -1,6 +1,16 @@
-document.getElementById('menuToggle').addEventListener('click', () => {
-    document.getElementById('sidebar').classList.toggle('active');
-});
+console.log("Ai Page!");
+
+var verifyLogin = localStorage.getItem("userFound");
+var userSubscription = localStorage.getItem("userSubscription");
+if(verifyLogin !== "true"){
+    alert("Please Login To Your Account First!");
+    window.location.href = "login.html";
+}else if(userSubscription === "false"){
+    alert("Support Message:\nPlease Subscribe To Any Subscription First To Use This Ai.");
+    window.location.href = "subscription.html"
+} 
+
+
 
 var imageContainer = document.getElementById("imageContainer")
 var chatList = document.getElementById("chatList");
@@ -90,10 +100,4 @@ function deleteChat() {
     alert("All Chats Deleted!");
     chats = localStorage.setItem("chats", JSON.stringify([]));
     window.location.reload();
-}
-
-function userLogout(){
-    localStorage.removeItem("userFound" , "true");
-    alert("Logged Out Successfull");
-    window.location.href = "index.html"
 }

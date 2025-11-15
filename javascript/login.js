@@ -1,5 +1,3 @@
-const { use } = require("react");
-
 console.log("Login Page!");
 
 function userLogin(event) {
@@ -15,7 +13,13 @@ function userLogin(event) {
         alert("Please Enter Email In Correct Format\nFor Example: name@domain.com");
     }else{
         localStorage.setItem("userFound" , "true");
+        localStorage.setItem("userSubscription" , "false");
         alert("Login Successfull!")
-        window.location.href = "ai.html"
+        window.location.href = "subscription.html"
     }
+}
+
+var verifyLogin = localStorage.getItem("userFound");
+if(verifyLogin === "true"){
+    window.location.href = "profile.html"
 }

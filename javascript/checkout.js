@@ -115,7 +115,15 @@ function completeOrder(event) {
         alert("Please Enter Correct Card CVV");
     } else {
         alert("Subscription Successfull Subscribed!\nYour Subscription Is " + nameOfPlan.textContent);
-        localStorage.setItem("subscriptionSubscribed", nameOfPlan.textContent);
-        window.location.href = "profile.html"
+        localStorage.setItem("userSubscription", nameOfPlan.textContent);
+        var monthsName = ["January" , "February" , "March" , "April" , "May" , "June" , "July" , "August" , "September" , "October" , "November" , "December"];
+        var date = new Date();
+        var currentMonth = date.getMonth();
+        var month = monthsName[currentMonth];
+        var day = date.getDate()
+        var fullYear = date.getFullYear()
+        var subscriptionDate = month + " " + day + ", " + fullYear;
+        localStorage.setItem("subscriptionDate" , subscriptionDate);
+        window.location.href = "profile.html";
     }
 }

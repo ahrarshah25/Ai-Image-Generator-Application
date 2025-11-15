@@ -1,6 +1,14 @@
 console.log("Subscription Page!");
 
 
+var verifyLogin = localStorage.getItem("userFound");
+if(verifyLogin === "true"){
+    signupDisplay.textContent = "Visiom AI"
+    signupDisplay.href = "ai.html"
+    signinDisplay.textContent = "Profile"
+    signinDisplay.href = "profile.html"
+}
+
 
 function basicSubscription(){
     var subscriptionName = "Basic Plan";
