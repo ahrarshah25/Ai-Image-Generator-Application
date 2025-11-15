@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Visiom</title>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+    <div class="floating-gradient gradient-1"></div>
+    <div class="floating-gradient gradient-2"></div>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                            <path d="M2 17l10 5 10-5" />
+                            <path d="M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <span class="logo-text">Visiom</span>
+                </div>
+                <div class="secure-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                    </svg>
+                    <span>Secure Checkout</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="checkout-wrapper">
+            <div class="checkout-grid">
+                <div class="checkout-main">
+                    <div class="section-header">
+                        <h1>Complete Your Purchase</h1>
+                        <p>Choose your payment method and complete the order</p>
+                    </div>
+
+                    <div class="checkout-card">
+                        <div class="card-section">
+                            <h2>Payment Method</h2>
+                            <div class="payment-methods">
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="card" checked>
+                                    <div class="payment-content">
+                                        <div class="payment-icon card">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <rect width="20" height="14" x="2" y="5" rx="2" />
+                                                <line x1="2" x2="22" y1="10" y2="10" />
+                                            </svg>
+                                        </div>
+                                        <div class="payment-info">
+                                            <span class="payment-title">Credit or Debit Card</span>
+                                            <div class="card-logos">
+                                                <img src="data:image/svg+xml,%3Csvg width='40' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='40' height='24' rx='4' fill='%231434CB'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-family='Arial' font-size='10' font-weight='bold'%3EVISA%3C/text%3E%3C/svg%3E">
+                                                <img src="data:image/svg+xml,%3Csvg width='40' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='mc' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' style='stop-color:%23EB001B'/%3E%3Cstop offset='50%25' style='stop-color:%23FF5F00'/%3E%3Cstop offset='100%25' style='stop-color:%23F79E1B'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='40' height='24' rx='4' fill='url(%23mc)'/%3E%3Ccircle cx='14' cy='12' r='6' fill='%23EB001B' opacity='0.8'/%3E%3Ccircle cx='26' cy='12' r='6' fill='%23F79E1B' opacity='0.8'/%3E%3C/svg%3E">
+                                                <img src="data:image/svg+xml,%3Csvg width='40' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='40' height='24' rx='4' fill='%2300579F'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-family='Arial' font-size='8' font-weight='bold'%3EAMEX%3C/text%3E%3C/svg%3E">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="card-section">
+                            <h2>Card Information</h2>
+                            <form class="payment-form">
+                                <div class="form-group">
+                                    <label class="form-label">Card Number</label>
+                                    <div class="input-wrapper">
+                                        <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect width="20" height="14" x="2" y="5" rx="2" />
+                                            <line x1="2" x2="22" y1="10" y2="10" />
+                                        </svg>
+                                        <input id="cardNumber" type="text" class="form-input" placeholder="1234 5678 9012 3456" maxlength="19">
+                                        <div class="card-type">
+                                            <svg width="32" height="20" viewBox="0 0 32 20" fill="none">
+                                                <rect width="32" height="20" rx="3" fill="#1434CB" />
+                                                <text x="16" y="13" text-anchor="middle" fill="white" font-family="Arial" font-size="8" font-weight="bold">VISA</text>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label class="form-label">Expiry Date</label>
+                                        <div class="input-wrapper">
+                                            <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                                <line x1="16" y1="2" x2="16" y2="6" />
+                                                <line x1="8" y1="2" x2="8" y2="6" />
+                                                <line x1="3" y1="10" x2="21" y2="10" />
+                                            </svg>
+                                            <input id="cardExpiryDate" type="date" class="form-input" placeholder="MM / YY" maxlength="7">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label">CVV</label>
+                                        <div class="input-wrapper">
+                                            <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                                                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                                            </svg>
+                                            <input id="cardCvv" type="text" class="form-input" placeholder="123" maxlength="4">
+                                            <div class="cvv-info">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <circle cx="12" cy="12" r="10" />
+                                                    <line x1="12" y1="16" x2="12" y2="12" />
+                                                    <line x1="12" y1="8" x2="12.01" y2="8" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Cardholder Name</label>
+                                    <div class="input-wrapper">
+                                        <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                            <circle cx="12" cy="7" r="4" />
+                                        </svg>
+                                        <input id="cardholderName" type="text" class="form-input" placeholder="John Doe">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checkout-sidebar">
+                    <div class="summary-card">
+                        <h2>Order Summary</h2>
+
+                        <div class="plan-preview">
+                            <div class="plan-badge">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" />
+                                </svg>
+                                <span id="planName">Premium Plan</span>
+                            </div>
+
+                            <div class="plan-features">
+                                <div class="feature-item">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                    <span id="imagesAllowed">5,000 generations/month</span>
+                                </div>
+
+                                <div class="feature-item">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                    <span id="gbAllowed">4 GB</span>
+                                </div>
+
+                                <div class="feature-item">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                    <span id="emailSupport">Priority support</span>
+                                </div>
+                                <div class="feature-item">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                    <span id="imageQuality">Quality</span>
+                                </div>
+                                <div class="feature-item">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                    <span id="templatesType">Templates</span>
+                                </div>
+                                <div id="appendForPremium"></div>
+
+                                <div class="feature-item hidden">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                    <span id="">API access</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="price-breakdown">
+                            <div class="price-row">
+                                <span id="nameOfPlan">Premium Plan (Monthly)</span>
+                                <span id="planPrice">399 PKR</span>
+                            </div>
+                            <!-- <div class="price-row discount">
+                                <span>Monthly Discount</span>
+                                <span id="monthlyDiscount">-10%</span>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="price-row total">
+                                <span>Total Due Today</span>
+                                <span>20.50</span>
+                            </div>
+                        </div> -->
+
+                        <button onclick="completeOrder(event)" class="btn-pay">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                            </svg>
+                            <span id="payPrice">Pay $20.50</span>
+                        </button>
+
+                        <div class="security-info">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                            </svg>
+                            <span>Your payment information is encrypted and secure</span>
+                        </div>
+
+                        <div class="guarantee-badge">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                <path d="m9 12 2 2 4-4" />
+                            </svg>
+                            <div>
+                                <strong>30-Day Money Back Guarantee</strong>
+                                <p>Cancel anytime, no questions asked</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trust-badges">
+                        <div class="trust-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                            </svg>
+                            <span>SSL Encrypted</span>
+                        </div>
+
+                        <div class="trust-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            </svg>
+                            <span>PCI Compliant</span>
+                        </div>
+
+                        <div class="trust-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span>Verified Secure</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Visiom. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+<script src="/javascript/checkout.js"></script>
+</html>

@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subscription Plans - Visiom</title>
     <link rel="stylesheet" href="/subscription.css">
-  <style>
-    
-
-  </style>
 </head>
 <body>
     <div class="container">
@@ -26,8 +22,8 @@
             <nav class="nav">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="#pricing" class="nav-link">Pricing</a>
-                <a href="login.html" class="nav-link">Login</a>
-                <a href="signup.html" class="nav-btn">Sign Up</a>
+                <a href="login.html" id="signinDisplay" class="nav-link">Login</a>
+                <a href="signup.html" id="signupDisplay" class="nav-btn">Sign Up</a>
             </nav>
         </header>
         <section class="hero">
@@ -86,7 +82,7 @@
                             <span>Basic Templates</span>
                         </li>
                     </ul>
-                    <a href="signup.html" class="btn-primary">Get Started</a>
+                    <button onclick="basicSubscription()" class="btn-primary">Get Started</button>
                 </div>
                 <div class="pricing-card featured">
                     <div class="popular-badge">Most Popular</div>
@@ -137,7 +133,7 @@
                             <span>Advanced Editing Tools</span>
                         </li>
                     </ul>
-                    <a href="signup.html" class="btn-primary">Get Started</a>
+                    <button onclick="professionalSubscription()" class="btn-primary">Get Started</button>
                 </div>
                 <div class="pricing-card">
                     <div class="card-header">
@@ -193,7 +189,7 @@
                             <span>Custom Training</span>
                         </li>
                     </ul>
-                    <a href="signup.html" class="btn-primary">Contact Sales</a>
+                    <button onclick="enterpriseSubscription()" class="btn-primary">Subscribe Now</button>
                 </div>
 
             </div>
@@ -241,4 +237,6 @@
         </footer>
     </div>
 </body>
+<script src="/javascript/index.js"></script>
+<script src="/javascript/subscription.js"></script>
 </html>

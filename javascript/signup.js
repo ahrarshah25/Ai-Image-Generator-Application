@@ -8,11 +8,12 @@ function userSignup(event) {
     var userEmail = document.getElementById("userEmail").value.trim();
     var userPassword = document.getElementById("userPassword").value.trim();
     var confirmPassword = document.getElementById("confirmPassword").value.trim();
+    var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if(firstName === "" || lastName === "" || userEmail === "" || userPassword === "" || confirmPassword === ""){
         alert("Please Fill All The Fields!")
-    // }else if(!regex.test(userEmail)){
-    //     alert("Please Enter Email In Correct Format\nFor Example: name@domain.com");
+    }else if(!regex.test(userEmail)){
+        alert("Please Enter Email In Correct Format\nFor Example: name@domain.com");
     }else if(confirmPassword !== userPassword){
         alert("Please Enter Correct Password In Confirm Password Section!");
     }else{
